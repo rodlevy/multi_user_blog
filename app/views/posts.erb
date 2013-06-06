@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Here Are Your Posts(click to edit)</h1>
+  <section>
+    <div id="post">
+      <%@posts.each do |post|%>
+      <li>Title:<a href='/post/edit/<%=post.title%>'> <%=post.title%></a>
+      </li>
+      <li>Post : <%=post.body%>
+      </li>
+      </ul>
+      <li>Created By: <%=@current_user.first_name%><% @current_user.last_name%>
+
+      </li>
+      <li>On: <%=post.created_at%>
+      </li>
+      <br>
+      <%end%>
+    </div>
+
+  </section>
+  </div>
+
+</div>

@@ -1,0 +1,29 @@
+ <h1>Edit Your Post Here</h1>
+ 
+ <section>
+  <p class="edit_post">
+    <form name='edit_post' action='/edit_post' method='post'>
+     <div>Title: <input type='text' name='post[title]' placeholder='<%=@post.title%>' autofocus></div>
+     <div>
+      <br>
+      <div>Body:  <textarea name='post[body]' placeholder='<%=@post.body%>'></textarea></div>
+    </div>
+    <input type='hidden' name='post[id]' value='<%=@post.id%>'></div>
+
+  </div>
+  <div> <input type='submit' value='Update!'></div>
+
+
+  <br>
+</form>
+</p>
+<p>
+<form name='delete_post' action='/delete_post' method='post'>
+  <input type='hidden' name='id' value='<%=@post.id%>'></div>
+  <div> <input type='submit' value='Delete this Post'></div>
+
+</form>
+</p>
+
+</section>
+

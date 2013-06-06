@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :posts
 
   def self.authenticate(params)
     user = User.find_by_email(params[:email])
