@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Let's Look at Blogs</h1>
   <section>
-    <div id="posts">
+    <div id="all_posts">
       <ul>Posts:
         <%@posts.each do |post|%>
            <li><a href='/post/<%=post.id%>'> <%=post.title%></a>
@@ -21,12 +21,15 @@
 
     </div>
 
-    <%if @current_user %>
   </section>
-  <div><a href='/create'>Create New Post</a>
-  </div>
-  <div><a href='/post'>View My Posts</a>
-  </div>  
-    <%end%>
+  <%if @current_user %>
+    <div >
+      <a id='make_post' href='/create'>Create New Post</a>
+    </div>
+
+    <div>
+      <a href='/post'>View My Posts</a>
+    </div>  
+  <%end%>
 
 </div>

@@ -23,15 +23,11 @@ end
 
 post '/edit_post' do
 	post = Post.find_by_id(params[:post][:id])
-	if params[:post][:title]
+	if !params[:post][:title].blank?
 		post.title = params[:post][:title]
-	else 
-		post.title = post.title
 	end
-	if params[:post][:body]
+	if !params[:post][:body].blank?
 		post.body =params[:post][:body]
-	else
-		post.body = post.body
 	end
 	post.save
 	redirect to '/'
