@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Let's Look at Blogs</h1>
+  <h1>Here Are All the Posts for This Tag</h1>
   <section>
     <div id="posts">
       <ul>Posts:
@@ -9,20 +9,11 @@
            </li>
       </ul>
       <br>
-    <div id='tags'>
-      <ul>Tags:
-        <%@tags.each do |tag|%>
-           <li><a href='/tag/<%=tag.title%>'> <%=tag.title%></a></li>
-           </li>
-           <%end%>
-
-      </ul>
-    </div>
+    
 
     </div>
 
   </section>
-  <div><a href='/create'>Create New Post</a>
   </div>
 
 </div>

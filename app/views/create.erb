@@ -1,0 +1,24 @@
+ <h1>Write Your Post Here</h1>
+ 
+ <section>
+  <p class="create_post">
+    <form name='create_post' action='/create' method='post'>
+     <div>Title: <input type='text' name='post[title]' placeholder='Title'autofocus></div>
+     <div>
+      <div>Body:  <textarea name='post[body]' placeholder="Body"></textarea></div>
+     </div>
+     <div>Create Your Own tag, or use one of the current tags:
+      <%@tags.each do |tag|%>
+      <%=tag.title%>,
+      <%end%>
+    </div>
+    <div>Tag:  <input type='text' name='tag'></div>
+    <div> <input type='submit' value='Create!'>
+    </div>
+
+
+    <br>
+  </form>
+</p>
+</section>
+
